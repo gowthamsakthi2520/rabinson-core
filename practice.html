@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="At Robinson Homes, we specialize in building custom homes that are known for their quality craftsmanship and attention to detail. We have over 5 years of experience building homes for clients all over Tamilnadu, and we would love to help you with your new home. Contact us today to get started">
+    <title>Best Real esate agency</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        
+<div class="row">
+
+</div>
+        <button>price</button>
+    </div>
+
+    <script>
+
+        //     let arr = [{
+        //         id:1,
+        //         name:"sabeel",
+        //         age:20
+        //     },
+        //     {
+        //         id:2,
+        //         name:"suhail",
+        //         age:20
+        //     }
+        // ]
+        // let arr = [[2,55,77,88,44],[44,99,54,67]];
+        // // let newarr = arr1.map((e)=>{
+        // //     return e * 2;
+        // // }).reduce((add,e)=> {return e+=add
+        // // }).filter((e)=>{
+        // // if(e > 40){
+        // //         alert("add is greater tha 40");
+        // //     }
+        // //     else{
+        // //         alert("add is less than 40");
+        // //     }
+        // // })
+
+        // let arr1 = [{
+        //     id:1,
+        //     name:"sabeel"
+        // }];
+        // let newarr = [...arr,...arr1];
+        // console.log(arr1);
+        // console.log(arr);
+        // console.log(newarr);
+        // let Arr = newarr.reduce((a,e)=>{
+        //     return a.concat(e);
+        // }).map((e)=>{
+        //     return e;
+        // }).filter((e)=>{
+        //     return e > 13;
+        // }).reduce((c,e)=>{
+        //     return c*=e;
+        // })
+        // console.log(Arr);
+
+        // // let newArr = arr.reduce((accu,curr)=>{
+        // //     return accu.concat(curr);
+        // // }).filter((curr)=>{
+        // //     return curr > 80;
+        // // })
+        // console.log(newArr)
+        // let container = document.querySelector(".container");
+        // const resquest = new XMLHttpRequest();
+        // resquest.open('GET', 'https://api.instantwebtools.net/v1/airlines');
+        // resquest.send();
+        // resquest.addEventListener('load', function () {
+        //     //  console.log(this.responseText);
+        //     const [data] = JSON.parse(this.responseText);
+        //     console.log(data);
+        //     const htmlData = ` <h1>${data.name}</h1><br>
+        //             the country is ${data.country}<br>
+        //             <img src="${data.logo}" />`;
+        //     container.innerHTML = htmlDataj;
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <script>
+        // const datarequest = new XMLHttpRequest();
+        // datarequest.open('GET', 'https://jsonplaceholder.typicode.com/todos/1');
+        // datarequest.send();
+        // datarequest.addEventListener('load', function () {
+        //     const dataview = JSON.parse(this.responseText);
+        //     console.log(dataview);
+        // });
+
+        // const demo = document.querySelector("#demo");
+        // fetch('https://dummyjson.com/products/1')
+        //     .then((res) => {
+        //         return res.json()
+        //     }).then((data) => {
+        //         console.log(data.title);
+        //         console.log(data.price)
+        //         console.log(data);
+        //         demo.innerHTML = data.description;
+        //         const data1 =
+        //         `<img src="${data.images[3]}" />`;
+        //         container.innerHTML = data1;
+        //     })
+        //     .catch((error) => {
+        //         console.log(error)
+        //     })
+        let row = document.querySelector(".row");
+        let container = document.querySelector(".container");
+        const feTch = async () => {
+            try {
+                const res = await fetch('https://fakestoreapi.com/products');
+                const data = await res.json();
+
+                // container.innerHTML = data.price;
+                console.log(data);
+            let a =   data.map((e)=>{
+                    return `
+                    <div class="col-md-3">
+                    <div class="card" style="width: 18rem;">
+  <img src="${e.image}" class="card-img-top" alt="..." style="width:100px!important">
+  <div class="card-body">
+   
+    
+    <a href="#" class="btn btn-primary">Price ${e.price}</a>
+  </div>
+</div>
+</div>`;
+                });
+                console.log(a);
+                row.insertAdjacentHTML("afterbegin",a);
+
+            }
+            catch (err) {
+                console.log(`erro is ${err}`);
+            }
+        }
+        feTch();
+    // 
+    //     let images = [{
+    //         id:1,
+    //         image: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Altja_j%C3%B5gi_Lahemaal.jpg"
+    //     },
+    //     { id:2,
+    //         image: "https://images.unsplash.com/photo-1610878180933-123728745d22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" },
+    //     {   id:3,
+    //          image: "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg" }
+    //   ]
+    //     let newArr1 = images.map((CurrEle) => {
+
+    //         return `
+            
+    //         <h1>${CurrEle.id}</h1>
+    //         <br>
+    //         <img src="${CurrEle.image}" width=300 />`;
+    //     });
+    //     console.log(newArr1);
+    //     container.innerHTML=newArr1;
+    </script>
+</body>
+
+</html>
